@@ -1,10 +1,24 @@
-function Card() {
+function Card(props) {
+
     return (
         <div className="card">
-            <img src="" alt="" />
-            <h2>Manikanta</h2>
-            <p>Play story games and watch peak anime and series </p>
+
+            <img
+                className="card-image"
+                src={`./src/assets/${props.image}`}
+                alt="profile"
+            />
+
+            <h2 className="card-title">
+                {props.name}
+            </h2>
+
+            <p className="card-text">
+                {props.hobby}
+            </p>
+
         </div>
-    )
+    );
 }
-export default Card
+
+export default Card;
